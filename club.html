@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+   <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght @400;600&display=swap" rel="stylesheet">
+
+  <style>
+        body {
+          background-color: #555450;
+          font-family: 'Rajdhani', sans-serif;
+          text-align: center;
+          color: #D8A4A4;
+          margin: 0;
+          padding: 10px;
+      }
+
+      nav {
+          display: flex;
+          gap: 5px;
+          padding: 15px 20px 0;
+          flex-wrap: wrap;
+      }
+
+      nav a {
+          text-decoration: none;
+          color: black;
+          font-size: 20px;
+          text-align: center;
+          padding: 15px;
+          width: 180px;
+          border-radius: 30px 30px 0 0;
+      }
+
+      .home-tab {
+          background-color: #F5BDBB;
+      }
+
+      .about-tab {
+          background-color: #F8D7DA;
+      }
+
+      .element-tab {
+          background-color: #FADADD;
+      }
+
+      .club-tab {
+          background-color: #EFB6C1;
+      }
+
+      .page {
+          background-color: #F5BDBB;
+          min-height: 80vh;
+          padding: 30px;
+          border: 3px solid #F5BDBB;
+          border-radius: 20px 20px 0 0;
+      }
+
+      header {
+          margin-top: 30px;
+      }
+
+      .reactor {
+          font-size: 55px;
+          margin-bottom: 10px;
+      }
+
+       h1 {
+          font-family: 'Orbitron', sans-serif;
+          color: #B97985;
+          font-size: 30px;
+      }
+
+      header p {
+          color: #D8A4A4;
+          font-size: 18px;
+      }
+
+      main {
+          background-color: white;
+          max-width: 320px;
+          margin: 30px auto;
+          padding: 25px;
+          border: 2px solid #D8A4A4;
+          border-radius: 20px;
+          box-shadow: 0 5px 15px #F8D7DA;
+      }
+
+      h3 {
+          color: #B97985;
+          margin-bottom: 20px;
+      }
+
+      input[type="text"] {
+          width: 90%;
+          padding: 12px;
+          margin: 8px 0;
+          border: 2px solid #F5D6D6;
+          border-radius: 12px;
+          background-color: #FFF9FF;
+          font-family: 'Rajdhani', sans-serif;
+          font-size: 16px;
+          box-sizing: border-box;
+      }
+
+      input[type="text"]:focus {
+          outline: none;
+          border-color: #D8A4A4;
+      }
+
+      input[type="button"] {
+          background-color: #D8A4A4;
+          color: white;
+          border: none;
+          padding: 12px 30px;
+          margin-top: 12px;
+          border-radius: 12px;
+          font-family: 'Orbitron', sans-serif;
+          cursor: pointer;
+      }
+
+      input[type="button"]:hover {
+          background-color: #B97985;
+      }
+
+      #result {
+          margin-top: 20px;
+          font-size: 18px;
+          color: #B97985;
+      }
+
+      @media screen and (max-width: 700px) {
+          nav a {
+              width: 120px;
+              font-size: 14px;
+          }
+
+          .page {
+              padding: 15px;
+          }
+      }
+  </style>
+
+</head>
+
+<body>
+
+   <nav>
+        <a href="index.html" class="home-tab">HOME</a>
+        <a href="about.html" class="about-tab">ABOUT ME</a>
+        <a href="element.html" class="element-tab">ELEMENT CHECKER</a>
+        <a href="club.html" class="club-tab">CLUB</a>
+   </nav>
+
+   <div class="page">
+
+       <header>
+           <div class="reactor"></div>
+           <h1>Volleyball Varsity</h1>
+           <p>This club is perfect for students who love volleyball, teamwork, and improving their skills!</p>
+       </header>
+
+       <main>
+           <h3> Player Registration </h3>
+
+           <form onsubmit="return false;">
+               <input type="text" id="first_name" placeholder="Enter your First Name">
+               <br>
+               <input type="text" id="last_name" placeholder="Enter your Last Name">
+               <br>
+               <input type="button" py-click="candidate_checker" value="ENTER">
+           </form>
+
+           <div id="result"></div>
+       </main>
+
+   </div>
+
+<py-script src="club.py"></py-script>
+</body>
+</html>

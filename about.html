@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 10px;
+            background-color: #555450;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            display: flex;
+            gap: 5px;
+            padding: 15px 20px 0;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-size: 25px;
+            text-align: center;
+            padding: 15px;
+            width: 180px;
+            border-radius: 30px 30px 0 0;
+        }
+
+        .home-tab {
+            background-color: #f5bdbb;
+        }
+
+        .about-tab {
+            background-color: #b9dce0;
+        }
+
+        .element-tab {
+            background-color: #f8edc9;
+        }
+
+        .club-tab {
+            background-color: #c5dfbd;
+        }
+
+        .container {
+            background-color: #f5bdbb;
+            min-height: 80vh;
+            padding: 40px;
+            border: 3px solid #f5bdbb;
+            border-radius: 20px 20px 0 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .profile {
+            width: 35%;
+            text-align: center;
+        }
+
+        .profile img {
+            width: 85%;
+            background-color: white;
+            padding: 12px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+            transform: rotate(-4deg);
+        }
+
+        .profile h1 {
+            font-size: 55px;
+            margin-top: 15px;
+            color: black;
+        }
+
+        .information {
+            width: 65%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .info h2 {
+            font-size: 35px;
+            font-weight: bold;
+            margin: 0;
+            color: #555450;
+        }
+
+        .info p {
+            font-size: 18px;
+            margin: 5px 10px;
+            color: black;
+            line-height: 1.6;
+        }
+
+        .right {
+            text-align: right;
+        }
+
+        @media screen and (max-width: 700px) {
+            .container {
+                flex-direction: column;
+                padding: 25px;
+            }
+
+            .profile, .information {
+                width: 100%;
+            }
+
+            .profile img {
+                width: 75%;
+            }
+
+            .profile h1 {
+                font-size: 40px;
+            }
+
+            .info h2 {
+                font-size: 27px;
+            }
+
+            .info p {
+                font-size: 17px;
+            }
+
+            nav a {
+                width: 120px;
+                font-size: 14px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html" class="home-tab">HOME</a>
+        <a href="about.html" class="about-tab">ABOUT ME</a>
+        <a href="element.html" class="element-tab">ELEMENT CHECKER</a>
+        <a href="club.html" class="club-tab">CLUB</a>
+    </nav>
+
+    <div class="container">
+
+        <div class="profile">
+
+            <img src="myphoto.jpg" alt="My Picture">
+
+            <h1>simone tinio</h1>
+
+        </div>
+
+        <div class="information">
+
+            <div class="info">
+                <h2>my interests</h2>
+                <p>
+                    Listening to music, watching movies,
+                    spending time with friends and family.
+                </p>
+            </div>
+
+            <div class="info right">
+                <h2>my hobbies</h2>
+                <p>
+                    Playing volleyball, doing arts and crafts,
+                    listening to music.
+                </p>
+            </div>
+
+            <div class="info">
+                <h2>my dreams</h2>
+                <p>
+                    Graduate senior high school, get into my
+                    dream school and become a doctor.
+                </p>
+            </div>
+
+            <div class="info right">
+                <h2>favorite quote</h2>
+                <p>
+                    "We accept the love we think we deserve"
+                    <br>
+                    - Perks of Being a Wallflower
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

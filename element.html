@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Periodic Table Finder</title>
+
+    <link rel="stylesheet"
+    href="https://pyscript.net/releases/2024.11.1/core.css" />
+
+    <script type="module"
+    src="https://pyscript.net/releases/2024.11.1/core.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #555450;
+            margin: 0;
+            padding: 10px;
+        }
+
+        nav {
+            display: flex;
+            gap: 5px;
+            padding: 15px 20px 0;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            text-align: center;
+            padding: 15px;
+            width: 180px;
+            border-radius: 30px 30px 0 0;
+        }
+
+        .home-tab {
+            background-color: #F5BDBB;
+        }
+
+        .about-tab {
+            background-color: #F8D7DA;
+        }
+
+        .element-tab {
+            background-color: #FADADD;
+        }
+
+        .club-tab {
+            background-color: #EFB6C1;
+        }
+
+        .page {
+            background-color: #F5BDBB;
+            min-height: 80vh;
+            padding: 30px;
+            border: 3px solid #F5BDBB;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .container {
+            background-color: white;
+            max-width: 550px;
+            margin: 30px auto;
+            padding: 25px;
+            border-radius: 12px;
+            border: 2px solid #D8A4A4;
+        }
+
+        h1 {
+            text-align: center;
+            color: #B97985;
+        }
+
+        p {
+            color: #555;
+        }
+
+        .instructions {
+            background-color: #F8D7DA;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #B97985;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+            border: 1px solid #D8A4A4;
+            border-radius: 6px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #D8A4A4;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #B97985;
+        }
+
+        #result {
+            background-color: #F8D7DA;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 8px;
+            line-height: 1.8;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #B97985;
+            font-size: 12px;
+        }
+
+        @media screen and (max-width: 700px) {
+            nav a {
+                width: 120px;
+                font-size: 14px;
+            }
+
+            .page {
+                padding: 15px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+   <nav>
+        <a href="index.html" class="home-tab">HOME</a>
+        <a href="about.html" class="about-tab">ABOUT ME</a>
+        <a href="element.html" class="element-tab">ELEMENT CHECKER</a>
+        <a href="club.html" class="club-tab">CLUB</a>
+   </nav>
+
+   <div class="page">
+
+       <div class="container">
+
+            <h1>Non-Metal Elements</h1>
+
+            <p style="text-align:center;">
+                Periodic Table Information Finder
+            </p>
+
+            <div class="instructions">
+                <b>Instructions:</b>
+                <p>Enter the symbol of a non-metal element below
+                to find its information.</p>
+            </div>
+
+            <label>Element Symbol:</label>
+
+            <input type="text" id="symbol"
+            placeholder="Enter element symbol (e.g. H, O, Rn)">
+
+            <button py-click="search_element">
+                Check Details
+            </button>
+
+            <h3 style="color:#B97985;">Result:</h3>
+
+            <div id="result">
+                Element information will appear here.
+            </div>
+
+            <footer>
+                ICT 10 | 2nd Quarter Skills Test
+            </footer>
+
+       </div>
+
+   </div>
+
+<py-script src="element.py"></py-script>
+
+</body>
+</html>
